@@ -1,0 +1,1209 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>ATA Gaming Shop</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <meta name="facebook-domain-verification" content="8mfow2gxkrfuw5beh8dm2vi4um97df" />
+        
+        <link rel="stylesheet" href="https://atagamingshop.com/CSS/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="icon" type="https://atagamingshop.com/image/x-icon" href="https://atagamingshop.com/Image/ATALOGO.jpg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+        
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool'></script>
+        
+        
+ </head>
+
+    <body>
+        <script>
+            document.addEventListener("contextmenu"), function (e) {
+                e.preventDefault();
+            }
+        </script>
+
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-center">
+                <!-- Logo Column -->
+                <div class="p-2">
+                    <img src="https://atagamingshop.com/Image/ATALOGO.jpg" class="img-fluid atalgimg" alt="Logo" style="border-radius: 10%;box-shadow: 10%;border-color: white;">
+                </div>
+                <!-- Title Column -->
+                <div class="p-2">
+                    <p class="ptitlea text-white mb-0">
+                        <span class="titlespan">ATA GAMING SHOP</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        
+        <hr class="text-white">
+    
+    
+        <div class="d-flex justify-content-center">
+            <div>
+                <h5 class="font-weight-bold text-white p-3">1. Enter Your Game ID</h5>
+                
+                <div class="row p-3">
+                    <div class="col">
+                        <input type="number" class="form-control" id="gameid" placeholder="Game ID" value="" onkeyup="inputSuccess()">
+                    </div>
+                    <div class="col">
+                        <input type="number" class="form-control" id="serverid" placeholder="Server ID" value="" onkeyup="inputSuccess()">
+                    </div>
+                    <div class="col">
+                        <div class="col-sm-10">
+                            <button id="submitButton" type="submit" class="btn btn-primary" onclick="myFunction()" disabled>
+                                <span id="buttonText">Check</span>
+                                <span id="spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            </button>
+
+                            <button id="resetButton" type="reset" class="btn btn-danger" onclick="resetForm()" style="display: none;">
+                                <span id="resetText">Reset</span>
+                            </button>
+                            
+                            <!-- <button id="modal" type="reset" class="btn btn-danger" onclick="showModal()">
+                                <span id="resetText">Modal</span>
+                            </button> -->
+                        </div>
+                    </div>
+                </div>
+                <div id="myID">
+                    <h5 class="font-weight-bold text-white p-3"><span id="resultDisplay">Welcome ATA Gaming Shop</span></h5>
+                </div>
+            </div>
+        </div><br>
+
+        
+            
+        
+        <div>
+            <h4 class="fancy" style="--w: 50vw;--c: #ffffff;--b:1px;--g: 40px">2. Select Package</h4><br>
+            <p id="selectradioerror" class="text-center" style="display: none; color: red;"></p>
+            <!--<p id="todayclose" class="text-center text-warning">Myanmar Server Only ဈေးများဖြစ်ပါတယ်။ကြာချိန် ၁၀ မိနစ် - ၂၀ မိနစ်</p>-->
+            <div class="marquee-section">
+                <div class="marquee-div">
+                    <div class="marquee text-warning">MLBB Diamond များကိုယုံကြည်စိတ်ချစွာ ဝယ်ယူရရှိနိုင်ပါပြီ...</div>
+                   <!-- <div class="marquee text-warning">Diamond များကုန်နေလို့ မနက်ဖြန် မနက် (၉ နာရီ) မှသာ လာရောက်ဝယ်ယူပေးကြပါရန်</div>-->
+                </div>
+            </div>
+        
+            
+            
+            
+            <div>
+                <div id="radio-cards-container">
+                    <!-- Radio Card 1 -->
+                    <div class="radio-card radio-card-1" onclick="selectRadioCard('1')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Weekly Pass.jpg" alt="Weekly Pass" />
+                            </div>
+                            <div class="radio-card-label">
+                                Weekly Pass
+                            </div>
+                            <h5 class="radio-card-label-description text-warning">
+                                6500 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 2 -->
+                    <div class="radio-card radio-card-2" onclick="selectRadioCard('2')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Twilight Pass.jpg" alt="Twilight Pass" />
+                            </div>
+                            <div class="radio-card-label">
+                                Twilight Pass
+                            </div>
+                            <h5 class="radio-card-label-description text-warning">
+                                35000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 3 -->
+                    <div class="radio-card radio-card-3" onclick="selectRadioCard('3')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Super Value Pass.jpg" alt="Super Value Pass" />
+                            </div>
+                            <div class="radio-card-label">
+                                Super Value Pass
+                            </div>
+                            <h5 class="radio-card-label-description text-warning">
+                                4000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 18 -->
+                    <div class="radio-card radio-card-18" onclick="selectRadioCard('18')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Double Diamond Pass.jpg" alt="50Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                Double-50
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(50+5 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                4000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 19 -->
+                    <div class="radio-card radio-card-19" onclick="selectRadioCard('19')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Double Diamond Pass.jpg" alt="150Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                Double-150
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(150+15 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                10000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 20 -->
+                    <div class="radio-card radio-card-20" onclick="selectRadioCard('20')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Double Diamond Pass.jpg" alt="250Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                Double-250
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(250+25 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                16000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 21 -->
+                    <div class="radio-card radio-card-21" onclick="selectRadioCard('21')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Double Diamond Pass.jpg" alt="500Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                Double-500
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(500+65 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                33000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 3 -->
+                    <!--<div class="radio-card radio-card-3" onclick="selectRadioCard('3')">-->
+                    <!--    <div class="sold-out-overlay">Sold Out</div>-->
+                    <!--    <div class="text-center">-->
+                    <!--        <div class="radio-card-icon">-->
+                    <!--            <img class="rounded" src="Image/couponpass.jpg" alt="Coupon Pass" />-->
+                    <!--        </div>-->
+                    <!--        <div class="radio-card-label">-->
+                    <!--            Coupon Pass-->
+                    <!--        </div>-->
+                    <!--        <h5 class="radio-card-label-description text-warning">-->
+                    <!--            22000 Ks-->
+                    <!--        </h5>-->
+                    <!--    </div>-->
+                    <!--</div>-->
+
+                    <!-- Radio Card 4 -->
+                    <div class="radio-card radio-card-4" onclick="selectRadioCard('4')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia1.jpg" alt="11Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                11 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(10+1 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                1000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                     <!--Radio Card 5 -->
+                    <div class="radio-card radio-card-5" onclick="selectRadioCard('5')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia1.jpg" alt="56Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                56 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(51+5 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                4500 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 6 -->
+                    <div class="radio-card radio-card-6" onclick="selectRadioCard('6')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia1.jpg" alt="86Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                86 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(78+8 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                5500 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 7 -->
+                    <div class="radio-card radio-card-7" onclick="selectRadioCard('7')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia1.jpg" alt="172Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                172 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(156+16 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                11000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 8 -->
+                    <div class="radio-card radio-card-8" onclick="selectRadioCard('8')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia1.jpg" alt="257Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                257 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(234+23 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                16000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 9 -->
+                    <div class="radio-card radio-card-9" onclick="selectRadioCard('9')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia2.jpg" alt="343Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                343 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(312+31 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                21000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 10 -->
+                    <div class="radio-card radio-card-10" onclick="selectRadioCard('10')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia2.jpg" alt="429Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                429 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(390+39 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                26000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 11 -->
+                    <div class="radio-card radio-card-11" onclick="selectRadioCard('11')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia2.jpg" alt="600Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                600 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(546+54 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                37000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 12 -->
+                    <div class="radio-card radio-card-12" onclick="selectRadioCard('12')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia3.jpg" alt="706Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                706 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(625+81 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                41000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 13 -->
+                    <div class="radio-card radio-card-13" onclick="selectRadioCard('13')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia3.jpg" alt="1049Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                1049 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(937+112 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                62000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 14 -->
+                    <div class="radio-card radio-card-14" onclick="selectRadioCard('14')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia4.jpg" alt="2195Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                2195 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(1860+335 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                125000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 15 -->
+                    <div class="radio-card radio-card-15" onclick="selectRadioCard('15')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia4.jpg" alt="3688Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                3688 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(3099+589 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                207000 Ks
+                            </h5>
+                        </div>
+                    </div>
+
+                    <!-- Radio Card 16 -->
+                    <div class="radio-card radio-card-16" onclick="selectRadioCard('16')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia5.jpg" alt="5532Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                5532 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(4649+883 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                311000 Ks
+                            </h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Radio Card 17 -->
+                    <div class="radio-card radio-card-17" onclick="selectRadioCard('17')">
+                        <div class="sold-out-overlay">Sold Out</div>
+                        <div class="text-center">
+                            <div class="radio-card-icon">
+                                <img class="rounded" src="https://atagamingshop.com/Image/Dia6.jpg" alt="9288Dia" />
+                            </div>
+                            <div class="radio-card-label">
+                                9288 Dia
+                            </div>
+                            <p class="fw-bold text-info" style="font-size: 10px;">(7740+1548 Bonus)</p>
+                            <h5 class="radio-card-label-description text-warning">
+                                517000 Ks
+                            </h5>
+                        </div>
+                    </div>
+            </div>
+                <div class="orderdiv">
+                    <div class="orderinfo">
+                        <p id="selected-card-title" class="text-center" style="color: rgb(255, 255, 255);"></p>
+                        <p id="selected-card-price" class="h5 text-center fw-bold text-warning"></p>
+                    </div>
+                    
+                    <div class="text-center d-grid col-6 mx-auto">
+                        <button id="buynowBtn" onclick="showError()" type="submit" class="btn btn-primary btn-lg">
+                            <span id="buttonText">Buy Now</span>
+                        </button>
+                    </div>
+                </div>
+            </div><br><br><br>
+            <h4 class="fancy" style="--w: 50vw;--c: #ffffff;--b:1px;--g: 40px">ATA Gaming Shop</h4>
+        </div>
+
+        
+        
+        <div id="orderModal" class="modal" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(101, 100, 105);">
+                        <h5 class="modal-title text-white" id="orderModalLabel">သင့်ရဲ့ ဝယ်ယူမှုအချက်အလက်များ</h5>
+                    </div>
+                    <div class="modal-body text-white" style="background-color: rgb(39, 39, 39);">
+                        <div class="row mb-3">
+                            <div class="col">
+                                <p> -
+                                    <span id="getName"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <p> -
+                                    <span id="getId"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                    <p> -
+                                        <span id="getDia"></span>
+                                    </p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <p> -
+                                    <span id="getPrice"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col">
+                                <p class="form-label">Count</p>
+                            </div>
+                            <div class="col">
+                                <button class="btn btn-secondary fw-bold" type="button" id="button-minus">-</button>
+                                <p id="quantity" class="text-center" style="display: inline-block; width: auto; margin: 0 10px;"></p>
+                                <button class="btn btn-secondary fw-bold" type="button" id="button-plus">+</button>
+                            </div>
+                        </div><br>
+
+                        <div class="row mb-3">
+                            <p class="h4 form-label fw-bold text-whit">Total Price - 
+                                <span class="h4 text-warning text-bold fw-bold" id="totalgetPrice"></span>
+                            </p>
+                        </div>
+
+                        <div class="row mb-3">
+                            <hr>
+                            <p class="h5 form-label fw-bold text-whit">သင့်ငွေပေးချေမှုကိုရွေးပါ။</p>
+                            <p class="text-secondary">အောက်ပါနံပါတ်များသို့ ငွေလွှဲပေးပြီး လုပ်ငန်းစဉ်နံပါတ်ပါတဲ့ပြေစာပုံအား ထည့်သွင်းပေးပါ။</p>
+                            <div id="pay-cards-container">
+                                <form action="#">
+                                    <input type="radio" name="payment" id="wave" value="09795602009">
+                                    <input type="radio" name="payment" id="kpay" value="09795602009">
+                                    <!--<input type="radio" name="payment" id="mytelpay" value="09678931774">-->
+                                </form>
+                                
+                                <div class="category">
+                                    <label for="wave" class="wavemethod">
+                                        <div class="imgName">
+                                            <div class="imgContainer">
+                                                <img src="https://atagamingshop.com/Image/Wave.jpg" alt="" width="70" height="30">
+                                            </div>
+                                            <div class="textContainer">
+                                                <span class="phnumber fw-bold">09795602009</span>
+                                                <span class="text-warning fw-bold" style="font-size: 13px;">(Sai Thiha Kyaw)</span>
+                                            </div>
+                                        </div>
+                                    </label>
+
+                                    <label for="kpay" class="kpaymethod">
+                                        <div class="imgName">
+                                          <div class="imgContainer">
+                                            <img src="https://atagamingshop.com/Image/Kpay.jpg" alt="" width="70" height="30">
+                                          </div>
+                                          <div class="textContainer">
+                                            <span class="phnumber fw-bold">09795602009</span>
+                                            <span class="text-warning fw-bold" style="font-size: 13px;">( A Me Me Tun )</span>
+                                          </div>
+                                        </div>
+                                    </label>
+
+                                    <!--<label for="mytelpay" class="mytelmethod">-->
+                                    <!--    <div class="imgName">-->
+                                    <!--        <div class="imgContainer">-->
+                                    <!--            <img src="Image/Mytel.jpg" alt="" width="70" height="30">-->
+                                    <!--        </div>-->
+                                    <!--        <div class="textContainer">-->
+                                    <!--            <span class="phnumber fw-bold">09678931774</span>-->
+                                    <!--            <span class="text-warning fw-bold" style="font-size: 13px;">(MgZinThuraAung)</span>-->
+                                    <!--        </div>-->
+                                    <!--    </div>-->
+                                    <!--</label>-->
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row mb-3">
+                            <p class="form-label fw-bold text-whit">ငွေလွှဲပြေစာပုံထည့်သွင်းပေးပါ။</p>
+                            <br><br>
+                            <div class="center">
+                                <div class="form-input">
+                                    <div class="preview">
+                                        <img id="file-ip-1-preview">
+                                        <label for="file-ip-1">Upload Image</label>
+                                        <input type="file" id="file-ip-1" accept="image/*" onchange="showPreview(event);">
+                              
+                                    </div>
+                                </div>
+                              </div>
+                               
+                        </div>
+                        <p class="text-warning" style="font-size: 13px;">မှားနေသော ငွေလွှဲပြေစာများဖြင့် ခနခနဝယ်ယူခြင်းပြုလုပ်နေပါက သင့် Account Ban ခံရမည်ဖြစ်သည်။</p>
+                        
+                    </div>  
+                    <div class="modal-footer" style="background-color: rgb(39, 39, 39);">
+                        <p id="errorPayment" style="color: rgb(255, 0, 0);"></p>
+                        <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+
+                        <button id="spinBTN" type="button" class="btn btn-primary" onclick="sendTele()" disabled>
+                            <span id="buyBTN">Buy</span>
+                            <span id="spinner1" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="finishModal" class="modal" aria-labelledby="finishModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: rgb(101, 100, 105);">
+                        <h5 class="modal-title text-white" id="finishModalLabel">Thank You</h5>
+                    </div>
+                    
+                    <div class="modal-body text-white" style="background-color: rgb(39, 39, 39);">
+                        
+                        <div class="main-container">
+                        	<div class="check-container">
+                        		<div class="check-background">
+                        			<svg viewBox="0 0 65 51" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        				<path d="M7 25L27.3077 44L58.5 7" stroke="white" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" />
+                        			</svg>
+                        		</div>
+                        		<div class="check-shadow"></div>
+                        	</div>
+                        </div>
+
+
+                        <p>- သင်၏ဝယ်ယူမှုများကို ဆောင်ရွက်ပေးနေပါပြီ။</p>
+                        <p>- ကျေးဇူးပြု၍ မိနစ်အနည်းငယ်စောင့်ဆိုင်းပေးပါ။</p><br>
+                        <p class="text-warning" style="font-size: 80%;">အဆင်မပြေမှု တစ်စုံတစ်ရာရှိပါက ဆက်သွယ်ရန် -</p>
+                        <div class="social-menu">
+                            
+                        </div><br><br><br><br>
+                    </div>
+                    
+                    <div class="modal-footer" style="background-color: rgb(39, 39, 39);">
+                        <button type="button" class="btn btn-secondary" onclick="resetForm()">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+             function showPreview(event){
+                if(event.target.files.length > 0){
+                    var src = URL.createObjectURL(event.target.files[0]);
+                    var preview = document.getElementById("file-ip-1-preview");
+                    preview.src = src;
+                    preview.style.display = "block";
+                    document.getElementById("spinBTN").disabled = false;
+                }
+            }
+            
+             function markAsSoldOut(cardId) {
+                var card = document.querySelector('.radio-card-' + cardId);
+                card.classList.add('sold-out');
+                card.onclick = function(event) {
+                    event.stopPropagation(); // Stop the click event
+                };
+            }
+            
+           // markAsSoldOut(1);
+           // markAsSoldOut(2);
+            markAsSoldOut(3);
+           // markAsSoldOut(4);
+           // markAsSoldOut(5);
+           // markAsSoldOut(6);
+           // markAsSoldOut(7);
+           // markAsSoldOut(8);
+           // markAsSoldOut(9);
+           // markAsSoldOut(10);
+           // markAsSoldOut(11);
+           // markAsSoldOut(12);
+           // markAsSoldOut(13);
+           // markAsSoldOut(14);
+           // markAsSoldOut(15);
+           // markAsSoldOut(16);
+           // markAsSoldOut(17);
+           // markAsSoldOut(18);
+           // markAsSoldOut(19);
+           // markAsSoldOut(20);
+           // markAsSoldOut(21);
+        
+        </script>
+
+        <script>
+            var paymentInputs = document.querySelectorAll('input[type="radio"][name="payment"]');
+          
+            paymentInputs.forEach(function(input) {
+              input.addEventListener('change', function() {
+                var labels = document.querySelectorAll('.category label');
+                labels.forEach(function(label) {
+                  label.classList.remove('selected');
+                });
+          
+                if(input.checked) {
+                  var label = document.querySelector('label[for="' + input.id + '"]');
+                  label.classList.add('selected');
+
+                  navigator.clipboard.writeText(input.value).then(function() {
+                    var toast = document.createElement("div");
+                    toast.textContent = "Copied";
+                    toast.style.position = "absolute";
+                    toast.style.padding = "5px";
+                    toast.style.fontSize = "12px";
+                    toast.style.background = "white";
+                    toast.style.color = "black";
+                    toast.style.borderRadius = "10px";
+                    toast.style.textAlign = "center";
+                    toast.style.zIndex = "1000";
+
+                    var label = document.querySelector('label[for="'+input.id+'"] .phnumber');
+                    var rect = label.getBoundingClientRect();
+
+                    var space = 20;
+
+                    toast.style.top = (rect.top + window.scrollY) + 'px';
+                    toast.style.left = (rect.right + window.scrollX + space) + 'px';
+
+                    document.body.appendChild(toast);
+
+                    setTimeout(function() {
+                        document.body.removeChild(toast);
+                    }, 500);
+                  }).catch(function(error) {
+                    console.error("Could not copy text:",error);
+                  });
+                }
+              });
+            });
+          </script>
+
+
+        <script>
+            function inputSuccess() {
+                var gameidValue = document.getElementById("gameid").value.trim();
+                var serveridValue = document.getElementById("serverid").value.trim();
+
+                document.getElementById('submitButton').disabled = gameidValue === '' || serveridValue === '';
+                }
+
+                document.getElementById('gameid').addEventListener('input',inputSuccess);
+                document.getElementById('serverid').addEventListener('input',inputSuccess);
+
+        </script>
+        
+
+        <script>
+            async function fetchBanList() {
+                const response = await fetch('banlist.txt');
+                const idtext = await response.text();
+                const banid = idtext.split(/\r?\n/);
+                return banid;
+            }
+
+            async function checkId() {
+                const GID = document.getElementById("gameid").value;
+                const SID = document.getElementById("serverid").value;
+                const banresultDisplay = document.getElementById("resultDisplay").value
+                const userId = `${GID}(${SID})`
+                const banlists = await fetchBanList();
+                
+                if (banlists.includes(userId)) {
+                    alert('Banned');
+                } else {
+                    fetchData();
+                }
+                return false;
+            }
+
+
+            async function fetchData() {
+                document.getElementById("spinner").style.display = "inline-block";
+                document.getElementById("buttonText").style.display = "none";
+                const GID = document.getElementById("gameid").value;
+                const SID = document.getElementById("serverid").value;
+                
+                const url = `https://atagamingshop.com/DiaSC_Bot/public/checkproduct/mobilelegends/13/${GID}/${SID}/br`;
+                
+
+                try {
+                    const response = await fetch(url);
+                    const resultText = await response.json();
+                    const username = resultText.checkproduct.username;
+                    console.log(resultText);
+
+                    if (username) {
+                        var welcomeColor = "white";
+                        var usernameColor = "#7FFF00";
+                        var welcomeSpan = "<span style='color:"+ welcomeColor +"'>မင်္ဂလာပါ - </span>";
+                        var usernameSpan = "<span style='color:"+ usernameColor +"'>"+username+"</span>";
+                        var usernameText = welcomeSpan + usernameSpan;
+                        var displayElement = document.getElementById("resultDisplay");
+
+                        displayElement.innerHTML = usernameText;  
+                        
+                        document.getElementById("spinner").style.display = "none";
+                        document.getElementById("buttonText").style.display = "inline-block";
+                        document.getElementById("submitButton").style.display = "none";
+                        document.getElementById("resetButton").style.display = "inline-block";
+                        document.getElementById("gameid").disabled = true;
+                        document.getElementById("serverid").disabled = true;
+                    } else {
+                        var errorColor = "red";
+                        var errorSpan = "<span style='color:" + errorColor + "'>Username not found!</span>";
+                        var errorElement = document.getElementById("resultDisplay");
+
+                        errorElement.innerHTML = errorSpan;
+                        document.getElementById("spinner").style.display = "none";
+                        document.getElementById("buttonText").style.display = "inline-block";
+                    }
+
+                    
+                    
+                } catch (error) {
+                    var errorColor = "red";
+                    var errorSpan = "<span style='color:" + errorColor + "'>Username not found!</span>";
+                    var errorElement = document.getElementById("resultDisplay");
+
+                    errorElement.innerHTML = errorSpan;
+                    document.getElementById("spinner").style.display = "none";
+                    document.getElementById("buttonText").style.display = "inline-block";
+                }
+            }
+            document.getElementById("submitButton").addEventListener("click",checkId);
+        </script>
+
+        <script>
+            function resetForm() {
+                document.getElementById("gameid").disabled = false;
+                document.getElementById("serverid").disabled = false;
+                document.getElementById("submitButton").style.display = "inline-block";
+                document.getElementById("resetButton").style.display = "none";
+
+                document.getElementById("gameid").value = '';
+                document.getElementById("serverid").value = '';
+                document.getElementById("resultDisplay").innerText = "Welcome ATA Gaming Shop"; 
+                
+                var previewimage = document.getElementById("file-ip-1-preview");
+                previewimage.style.display = "none";
+
+                var modal = document.getElementById('finishModal');
+                modal.style.display = 'none';
+            }
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            var minusButton = document.getElementById('button-minus');
+            var plusButton = document.getElementById('button-plus');
+            var quantityField = document.getElementById('quantity');
+
+            minusButton.addEventListener('click', function () {
+                var currentQuantity = parseInt(quantityField.innerText);
+                if (currentQuantity > 1) {
+                quantityField.innerText = currentQuantity - 1;
+                }
+            });
+
+            plusButton.addEventListener('click', function () {
+                var currentQuantity = parseInt(quantityField.innerText);
+                quantityField.innerText = currentQuantity + 1;
+            });
+            });
+        </script>
+
+        <script>
+            let quantity= 1;
+            function updatePriceDisplay() {
+                
+                let priceText = document.getElementById('getPrice').textContent;
+                let price = parseInt(priceText.replace(' Ks',''));
+                const totalPrice = price * quantity;
+
+                document.getElementById('totalgetPrice').textContent = totalPrice + ' Ks';
+            }
+
+            function increaseQuantity() {
+                quantity++;
+                updatePriceDisplay();
+            }
+
+            function decreaseQuantity() {
+                if (quantity > 1) {
+                    quantity--;
+                    updatePriceDisplay();
+                }
+            }
+
+            function resetQuantity() {
+                quantity= 1;
+                updatePriceDisplay();
+            }
+
+            document.getElementById('button-plus').addEventListener('click',increaseQuantity);
+            document.getElementById('button-minus').addEventListener('click',decreaseQuantity);
+        </script>
+
+        <script>
+            function showModal() {
+                resetQuantity();
+                    var modal = document.getElementById('orderModal');
+                    var buynowButon = document.getElementById('buynowBtn');
+                    const GID = document.getElementById("gameid").value;
+                    const SID = document.getElementById("serverid").value;
+                    var displayElement = document.getElementById("resultDisplay").textContent;
+                    var nametext = displayElement.split(' - ')[1];
+                    var youridDisplay = document.getElementById('getId');
+                    var diaamountDisplay = document.getElementById('getDia');
+                    var countDisplay = document.getElementById('quantity');
+                    const selectedRadioCardLabel = document.getElementById('selected-card-title').textContent.trim();
+                    document.querySelector('.orderdiv').classList.remove('active');
+
+                    
+                    document.getElementById('getName').textContent = nametext;
+                    youridDisplay.innerHTML = `${GID}(${SID})`;
+                    diaamountDisplay.innerHTML = selectedRadioCardLabel;
+                    countDisplay.innerText = '1';
+                    
+                    modal.style.display = 'block';
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = 'none';
+                        }
+                    };
+            }
+
+            function finishshowModal() {
+                var modal = document.getElementById('finishModal');
+
+                modal.style.display = 'block';
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = 'none';
+                        }
+                    }
+            }
+
+            function closeModal () {
+                var modal1 = document.getElementById('orderModal');
+                var modal2 = document.getElementById('finishModal');
+                modal1.style.display = 'none';
+                modal2.style.display = 'none';
+
+            }
+        </script>
+        
+    
+        <script>
+            function myFunction() {
+                document.getElementById
+              var x = document.getElementById("myID");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } 
+            }
+        </script>
+
+        <script>
+                const selectPayCard = (cardId) => {
+                    const allRadioCards = document.querySelectorAll(".pay-card");
+                    allRadioCards.forEach((element) => {
+                        element.classList.remove("selected");
+                    });
+                    const selectedCard = document.querySelector(`.pay-card-${cardId}`);
+                    selectedCard.classList.add("selected");
+
+                    var selectErrormsg = document.getElementById('selectradioerror');
+                    if (selectErrormsg) {
+                        selectErrormsg.style.display = 'none';
+                    }
+                };
+
+                const selectRadioCard = (cardId) => {
+                    const allRadioCards = document.querySelectorAll(".radio-card");
+                    allRadioCards.forEach((element) => {
+                        element.classList.remove("selected");
+                    });
+                    const selectedCard = document.querySelector(`.radio-card-${cardId}`);
+                    selectedCard.classList.add("selected");
+                    var cardTitle = selectedCard.querySelector('.radio-card-label').textContent;
+                    var cardPrice = selectedCard.querySelector('.radio-card-label-description').textContent;
+
+                    document.getElementById('selected-card-title').textContent = cardTitle;
+                    document.getElementById('selected-card-price').textContent = cardPrice;
+                    document.getElementById('getPrice').textContent = cardPrice;
+                    document.getElementById('totalgetPrice').textContent = cardPrice;
+                    document.querySelector('.orderdiv').classList.add('active');
+
+
+                    var selectErrormsg = document.getElementById('selectradioerror');
+                    if (selectErrormsg) {
+                        selectErrormsg.style.display = 'none';
+                    }
+                };
+
+                function showError() {
+                    window.scrollTo(0,0);
+
+                    var gameidValue = document.getElementById("gameid");
+                    var serveridValue = document.getElementById("serverid");
+                    var selectErrormsg = document.getElementById('selectradioerror')
+                    var gerrorMassage = 'သင့် Game Id ထည့်ပါ။'
+                    var serrorMassage = 'သင့် Server Id ထည့်ပါ။'
+                    var ggerrorMassage = 'သင့် Game Id ကိုပြန်စစ်ပါ။'
+                    var sserrorMassage = 'သင့် Server Id ကိုပြန်စစ်ပါ။'
+                    var noselectionError = 'သင်ဝယ်ယူမယ့် ပမာဏကို ရွေးချယ်ပေးပါ။'
+
+                    if (gameidValue.value === '') {
+                        gameidValue.style.borderColor = 'red';
+                        gameidValue.style.borderWidth = '2px';
+                        gameidValue.style.borderStyle = 'solid';
+                        createErrorMessage(gameidValue,gerrorMassage);
+                    } else if (serveridValue.value ==='') {
+                        serveridValue.style.borderColor = 'red';
+                        serveridValue.style.borderWidth = '2px';
+                        serveridValue.style.borderStyle = 'solid';
+                        createErrorMessage(serveridValue,serrorMassage);
+                    } else if (document.getElementById('resultDisplay').textContent.includes('Welcome ATA Gaming Shop') || document.getElementById('resultDisplay').textContent.includes('Username not found!')) {
+                        alert('သင်ထည့်ထားတဲ့ ID ကိုစစ်ဆေးရန် Check ခလုတ်ကိုနှိပ်ပါ။')
+                    } else if (!document.querySelector('.radio-card.selected')) {
+                        console.log('select error');
+                        selectErrormsg.textContent = noselectionError;
+                        selectErrormsg.style.display = 'block';
+                    } else {
+                        selectErrormsg.style.display = 'none';
+                        console.log('done');
+                    }
+                }
+
+                function sendTele() {
+                    document.getElementById("spinner1").style.display = "block";
+                    document.getElementById("buyBTN").style.display = "none";
+                    const GID = document.getElementById("gameid").value;
+                    const SID = document.getElementById("serverid").value;
+                    const selectedRadioCardLabel = document.getElementById('selected-card-title').textContent.trim();
+                    const countDisplay = document.getElementById('quantity').textContent;
+                    const nameDisplay = document.getElementById('getName').textContent;
+                    const priceDisplay = document.getElementById('totalgetPrice').textContent;
+                    const messageTele = `${GID}(${SID})\n${selectedRadioCardLabel} (${countDisplay})\n${priceDisplay}\n\nName - ${nameDisplay}`;
+                    console.log(messageTele);
+
+                    var fileInput = document.getElementById('file-ip-1');
+                    var photo = fileInput.files[0];
+
+                    sendMessageToTelegram(messageTele,photo);
+                }
+
+                function sendMessageToTelegram(message,photo) {
+                    const telegramApiUrl = `https://api.telegram.org/bot6498684423:AAFmCeMnWEiqpQUFj3NUcM2V8HmKx6MKH-c/sendPhoto`;
+                    const chatId = '@KoAung811';
+                    const formData = new FormData();
+
+                    formData.append('chat_id', chatId);
+
+                    if (message) {
+                        formData.append('caption',message);
+                    }
+
+                    if (photo) {
+                        formData.append('photo', photo);
+                    }
+
+                    fetch(telegramApiUrl, {
+                        method: 'POST',
+                        // headers: {
+                        //     'Content-Type': 'multipart/form-data'
+                        // },
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log('Message sent to Telegram group:', data);
+                        var modal1 = document.getElementById('orderModal');
+                        var modal2 = document.getElementById('finishModal');
+
+                        modal1.style.display = 'none';
+                        modal2.style.display = 'block';
+
+                        document.getElementById("spinner1").style.display = "none";
+                        document.getElementById("buyBTN").style.display = "inline-block";
+                    })
+                    .catch(error => {
+                        console.error('Error sending message to Telegram group:', error);
+                        document.getElementById("spinner1").style.display = "none";
+                        document.getElementById("buyBTN").style.display = "inline-block";
+
+                        alert("Network မချိတ်ဆက်နိုင်ပါ။ကျေးဇူးပြု၍ ပြန်လုပ်ပေးပါ။")
+                    });
+                    }
+
+                function createErrorMessage(input,message) {
+                    var existingError = input.parentNode.querySelector('.error-message');
+                    if (existingError) {
+                        input.parentNode.removeChild(existingError);
+                    }
+                    
+                    var errorEle = document.createElement('p');
+                    errorEle.setAttribute('class','error-message');
+                    errorEle.style.color = 'red';
+                    errorEle.textContent = message;
+
+                    input.parentNode.insertBefore(errorEle,input.nextSibling);
+                }
+
+                function clearError(event) {
+                    var input = event.target;
+                    var nextSibling = input.nextSibling;
+
+                    input.style.borderColor = '';
+                    input.style.borderWidth = '';
+                    input.style.borderStyle = '';
+
+                    if (nextSibling && nextSibling.tagName === 'P') {
+                        input.parentNode.removeChild(nextSibling);
+                    }
+                }
+
+                var gameidValue = document.getElementById("gameid");
+                var serveridValue = document.getElementById("serverid");
+
+                gameidValue.addEventListener('input',function(event) {
+                    if (!this.value) {
+                        document.getElementById('resultDisplay').textContent = 'Welcome ATA Gaming Shop';
+                    }
+                    clearError(event);
+                });
+                serveridValue.addEventListener('input',function(event) {
+                    if (!this.value) {
+                        document.getElementById('resultDisplay').textContent = 'Welcome ATA Gaming Shop';
+                    }
+                    clearError(event);
+                });
+
+                function checkInputAndSwitchFuction() {
+                    var gameidValue = document.getElementById("gameid");
+                    var serveridValue = document.getElementById("serverid");
+                    var buyButton = document.getElementById("buynowBtn");
+
+                    if (gameidValue.value !== '' && serveridValue.value !== '') {
+                        buyButton.onclick = function() {
+                            var resultText = document.getElementById('resultDisplay').textContent;
+                            if (resultText.includes('Welcome ATA Gaming Shop') || resultText.includes('Username not found!') || (!document.querySelector('.radio-card.selected'))) {
+                                showError();
+                            } else {
+                                showModal();
+                            }
+                        };
+                    } else {
+                        buyButton.onclick = showError;
+                    }
+                }
+
+                gameidValue.addEventListener('input',checkInputAndSwitchFuction);
+                serveridValue.addEventListener('input',checkInputAndSwitchFuction);
+            </script>
+
+
+        <!-- Bootstrap JavaScript Libraries -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
