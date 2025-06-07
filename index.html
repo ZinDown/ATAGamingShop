@@ -52,10 +52,9 @@
                 </div>
             </div>
         </div>
-        
+        <br>
 
-        
-        <hr class="text-white">
+ 
     
     
         <div class="d-flex justify-content-center">
@@ -497,7 +496,13 @@
             <h4 class="fancy" style="--w: 50vw;--c: #ffffff;--b:1px;--g: 40px">ATA Gaming Shop</h4>
         </div>
 
-        
+        <div class="social-menu">
+            <ul>
+          
+                <li><a href="https://t.me/jhon_coder_007" target="blank"><i class="fa fa-telegram" style="font-size:30px;color:white;"></i></a></li>
+           
+            </ul>
+        </div>
         
         <div id="orderModal" class="modal" aria-labelledby="orderModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-scrollable">
@@ -574,7 +579,7 @@
                                             </div>
                                             <div class="textContainer">
                                                 <span class="phnumber fw-bold">09795602009</span>
-                                                <span class="text-warning fw-bold" style="font-size: 13px;">(Sai Thiha Kyaw)</span>
+                                                <span class="text-warning fw-bold" style="font-size: 13px;">( Sai Thiha Kyaw )</span>
                                             </div>
                                         </div>
                                     </label>
@@ -663,7 +668,11 @@
                         <p>- ကျေးဇူးပြု၍ မိနစ်အနည်းငယ်စောင့်ဆိုင်းပေးပါ။</p><br>
                         <p class="text-warning" style="font-size: 80%;">အဆင်မပြေမှု တစ်စုံတစ်ရာရှိပါက ဆက်သွယ်ရန် -</p>
                         <div class="social-menu">
-                            
+                            <ul>
+     
+                                <li><a href="https://t.me/jhon_coder_007" target="blank"><i class="fa fa-telegram" style="font-size:30px;color:white;"></i></a></li>
+                                
+                            </ul>
                         </div><br><br><br><br>
                     </div>
                     
@@ -697,12 +706,12 @@
            // markAsSoldOut(1);
            // markAsSoldOut(2);
             markAsSoldOut(3);
-           // markAsSoldOut(4);
+            markAsSoldOut(4);
            // markAsSoldOut(5);
            // markAsSoldOut(6);
            // markAsSoldOut(7);
-           // markAsSoldOut(8);
-           // markAsSoldOut(9);
+         //   markAsSoldOut(8);
+         //   markAsSoldOut(9);
            // markAsSoldOut(10);
            // markAsSoldOut(11);
            // markAsSoldOut(12);
@@ -782,7 +791,7 @@
 
         <script>
             async function fetchBanList() {
-                const response = await fetch('banlist.txt');
+                const response = await fetch('https://corsproxy.io/?https://atagamingshop.com/banlist.txt');
                 const idtext = await response.text();
                 const banid = idtext.split(/\r?\n/);
                 return banid;
@@ -810,7 +819,7 @@
                 const GID = document.getElementById("gameid").value;
                 const SID = document.getElementById("serverid").value;
                 
-                const url = `https://atagamingshop.com/DiaSC_Bot/public/checkproduct/mobilelegends/13/${GID}/${SID}/br`;
+                const url = `https://corsproxy.io/?https://atagamingshop.com/DiaSC_Bot/public/checkproduct/mobilelegends/13/${GID}/${SID}/br`;
                 
 
                 try {
@@ -1085,7 +1094,7 @@
 
                 function sendMessageToTelegram(message,photo) {
                     const telegramApiUrl = `https://api.telegram.org/bot6498684423:AAFmCeMnWEiqpQUFj3NUcM2V8HmKx6MKH-c/sendPhoto`;
-                    const chatId = '@KoAung811';
+                    const chatId = '@diamondshop125';
                     const formData = new FormData();
 
                     formData.append('chat_id', chatId);
